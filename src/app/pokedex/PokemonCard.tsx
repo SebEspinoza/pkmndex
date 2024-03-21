@@ -16,12 +16,8 @@ export function PokemonCard({ name, id, types }: PokemonCardProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedPokemon, setSelectedPokemon] = useState<any>(null);
 
-    const handleClick = () => {
-        setSelectedPokemon({ name, id, types });
-        setIsOpen(true);
-    }
 
-    const typeColors = {
+    const typeColors: TypeColors = {
         normal: "bg-[#9fa19f]",
         fighting: "bg-[#ff8000]",
         flying: "bg-[#81b9ef]",
